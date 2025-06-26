@@ -1,0 +1,276 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #222831; /* Fundo escuro */
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px; /* Altura da logo */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff; /* Texto branco */
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #948979; /* Destaque na cor principal */
+  border-bottom-color: #948979;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .search {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.auth-buttons .search:hover {
+  background-color: #948979;
+  color: #fff;
+}
+
+.auth-buttons .profile {
+  background-color: #948979;
+  color: #fff;
+  text-decoration: none;
+}
+
+.auth-buttons .profile:hover {
+  background-color: #7f746a;
+}
+.auth-buttons .profile a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Herda a cor do botão */
+  display: inline-block; /* Garante que o link se comporte como um botão */
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.badge {
+  background-color: rgba(148, 137, 121, 0.1);
+  color: #948979;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.highlight {
+  color: #948979;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: #948979;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #7f746a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(148, 137, 121, 0.3);
+}
+
+.secondary-link {
+  color: #948979;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.secondary-link:hover {
+  text-decoration: underline;
+}
+
+/* Seção de Categorias */
+.categories {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  color: #948979;
+  margin-bottom: 40px;
+}
+
+.category-container {
+  display: flex; /* Altera para Flexbox */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.category {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex: 1 1 calc(25% - 20px); /* Cada item ocupa 25% da largura menos o gap */
+  max-width: 250px; /* Define uma largura máxima */
+}
+
+.category:hover {
+  background-color: #948979;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(148, 137, 121, 0.3);
+}
+
+.category i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.category p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #948979;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .category-container {
+    flex-direction: column; /* Alinha categorias em coluna */
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
